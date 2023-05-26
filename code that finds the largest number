@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class uygulama4 {
+
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		int sayı=scan.nextInt();
+		int enb=0;
+		int []a = new int[6];
+		
+		for(int i=0;i<6;i++) {
+		
+			if(enb==a[i]) {
+				System.out.println("en büyük sayı:"+a[i]);
+			}
+			
+		}
+	}}
