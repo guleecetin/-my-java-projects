@@ -1,0 +1,146 @@
+import java.util.Scanner;
+
+public class ATM {
+
+	public void calıs(Hesap hesap) {
+		Login login=new Login();
+		Scanner scan=new Scanner(System.in);
+		System.out.println("bankamıza hoşgeldiniz");
+		System.out.println("kullanıcı girişi:");
+		int girishakkı=3;
+		
+		while(true) {
+			if(login.Login(hesap)) {
+				System.out.println("giriş başarılı");
+				break;
+			}
+			else {
+				System.out.println("giriş başarısız");
+				girishakkı-=1;
+				System.out.println("kalan giriş hakkı:"+girishakkı);
+			}
+			if(girishakkı==0) {
+				System.out.println("giriş hakkı bitti");
+				return;
+				
+			}
+			
+				
+			}
+		    String islemler="1.bakiyeyi sorgula\n"
+		                     +"2.para yatırma\n"
+		                      +"3.para cekme\n"
+		    		          +"4.cıkıs icin q ya basın\n";
+		    System.out.println(islemler);
+		    
+		    while(true) {
+		    	System.out.println("işlemi seciniz");
+		    	String islem=scan.nextLine();
+		    	
+		    	if(islem.equals("q")) {
+		    		break;
+		    	}
+		    	else if(islem.equals("1")) {
+		    		System.out.println("bakiyeniz:"+hesap.getBakiye());
+		    	}
+		    	else if(islem.equals("2")) {
+		    		System.out.println("yatırmak istediginiz tutar:");
+		    		int tutar=scan.nextInt();
+		    		scan.nextLine();
+		    		hesap.parayatır(tutar);
+		    		
+		    	}
+		    	else if(islem.equals("3")) {
+		    		System.out.println("çekmek istediginiz tutar:");
+		    		int tutar=scan.nextInt();
+		    		scan.nextLine();
+		    		hesap.paracek(tutar);
+		    		
+		    }
+		    	else {
+		    		System.out.println("geçersiz işlem");
+		    	}
+		    
+		
+		
+
+	}
+
+	}}
+  
+  public class Hesap {
+
+	private String Kullanıcıadı;
+	private String parola;
+	private int bakiye;
+	
+	public Hesap(String Kullanıcıadı, String parola, int bakiye) {
+		super();
+		this.Kullanıcıadı = Kullanıcıadı;
+		this.parola = parola;
+		this.bakiye = bakiye;
+	}
+	public String getKullanıcıadı() {
+		return Kullanıcıadı;
+	}
+	public void setKullanıcıadı(String Kullanıcıadı) {
+		this.Kullanıcıadı = Kullanıcıadı;
+	}
+	public String getParola() {
+		return parola;
+	}
+	public void setParola(String parola) {
+		this.parola = parola;
+	}
+	public int getBakiye() {
+		return bakiye;
+	}
+	public void setBakiye(int bakiye) {
+		this.bakiye = bakiye;
+	}
+	public void parayatır(int tutar) {
+		this.bakiye+=tutar;
+		System.out.println("yeni bakiyeniz:"+bakiye);
+	}
+	public void paracek(int tutar ) {
+		if(bakiye-tutar<0) {
+			System.out.println("yeterli bakiye yok");
+		}
+		else{
+			bakiye-=tutar;
+			System.out.println("yeni bakiyeniz:"+bakiye);
+		}
+		}
+    }
+    import java.util.Scanner;
+
+public class Login {
+
+	public boolean Login(Hesap hesap) {
+		Scanner scan=new Scanner(System.in);
+		String Kullanıcıadı;
+		String parola;
+		System.out.println("kullanıcıadı:");
+		Kullanıcıadı=scan.nextLine();
+		parola=scan.nextLine();
+		System.out.println("parola:");
+		if(hesap.getKullanıcıadı().equals(Kullanıcıadı) && hesap.getParola().equals(parola)) {
+			return true;
+			
+		}
+		else {
+			return false;
+		}
+		}
+    }
+    public class Main {
+ public static void main(String []args) {
+	ATM atmm=new ATM();
+	Hesap hesap=new Hesap("gülendam çetin","1378",30000);
+	
+	atmm.calıs(hesap);
+	
+	System.out.println("programdan cıkılıyor..");
+
+	}
+}
