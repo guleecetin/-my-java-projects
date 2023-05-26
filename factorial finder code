@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class faktoriyel {
+	public static void faktoriyel() {
+
+Scanner scan=new Scanner(System.in);
+int sayı=scan.nextInt();
+int faktoriyel=1;
+while(sayı>0) {
+	faktoriyel=faktoriyel*sayı;
+	sayı--;
+}
+System.out.println("faktoriyel:"+faktoriyel);
+}
+
+	public static void main(String[] args) {
+	faktoriyel();
+	}
+}
