@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class uygulama13 {
+	
+	public static int ebobbul(int a,int b) {
+		int ebob=1;
+		for(int i=1;i<=a && i<=b;i++) {
+			if((a%i==0)&&(b%i==0)){
+				ebob=i;
+			}
+		}
+	return ebob;
+	
+	}
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		 int a=scan.nextInt();
+		 int b=scan.nextInt();
+		 System.out.println("sonuc:"+ebobbul(a,b));
+
+	}
+
+}
