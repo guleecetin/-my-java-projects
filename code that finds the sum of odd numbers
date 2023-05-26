@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class uygulama7 {
+
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		int toplam=0;
+		for(int i=0;i<4;i++) {
+		int sayı=scan.nextInt();
+		 if(sayı%2==1) {
+			 
+			 toplam=toplam+sayı;
+		 }
+			System.out.println("toplam:"+toplam);
+				
+				 
+			 
+		 }
+
+	}
+
+}
