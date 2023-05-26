@@ -1,0 +1,96 @@
+public class kart {
+	private char deger;
+	private boolean tahmin=false;
+	
+	public kart(char deger) {
+		this.deger=deger;
+	}
+	public char getdeger() {
+		return deger;
+		
+	}
+	public void setdeger(char deger) {
+		this.deger=deger;
+	}
+	public boolean istahmin() {
+		return tahmin;
+	}
+	public void settahmin(boolean tahmin) {
+		this.tahmin=tahmin;
+	}
+
+	
+		
+
+	}
+  import java.util.Scanner;
+
+public class mainn {
+	private static kart[][] kartlar=new kart[4][4];
+	public static void main(String []args) {
+		
+		kartlar[0][0]=new kart('e');
+		kartlar[0][1]=new kart('a');
+		kartlar[0][2]=new kart('b');
+		kartlar[0][3]=new kart('f');
+		kartlar[1][0]=new kart('g');
+		kartlar[1][1]=new kart('a');
+		kartlar[1][2]=new kart('d');
+	    kartlar[1][3]=new kart('b');
+		kartlar[2][0]=new kart('f');
+	    kartlar[2][1]=new kart('c');
+		kartlar[2][2]=new kart('d');
+		kartlar[2][3]=new kart('h');
+		kartlar[3][0]=new kart('e');
+		kartlar[3][1]=new kart('g');
+		kartlar[3][2]=new kart('b');
+		kartlar[3][3]=new kart('c');
+		//oyuntahtası();
+		
+		while(oyunbittimi()==false) {
+			oyuntahtası();
+			tahminet();
+		}}
+		public static void tahminet() {
+			Scanner scan=new Scanner(System.in);
+			System.out.print("i ve j degerlerini gir:");
+			int i1=scan.nextInt();
+			int j1=scan.nextInt();
+		    kartlar[i1][j1].settahmin(true);
+		    oyuntahtası();
+		    System.out.print("i ve j degerlerini gir:");
+		    int i2=scan.nextInt();
+		    int j2=scan.nextInt();
+		    if(kartlar[i1][j1].getdeger()==kartlar[i2][j2].getdeger()) {
+		    	kartlar[i2][j2].settahmin(true);
+		    }
+		    else {
+		    	kartlar[i2][j2].settahmin(false);
+		    }
+		    
+		    
+	}      
+	public static boolean oyunbittimi() {
+		for(int i=0;i<4;i++) {
+			for(int j=0;j<4;j++) {
+				if(kartlar[i][j].istahmin()==false) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	public static void oyuntahtası() {
+		for(int i=0;i<4;i++) {
+			for(int j=0;j<4;j++) {
+				if(kartlar[i][j].istahmin()) {
+					System.out.print("|"+kartlar[i][j].getdeger()+"|");
+				}
+				else {
+					System.out.print("| |");
+				}}
+			System.out.println("");
+		}
+				}
+			}
+		
