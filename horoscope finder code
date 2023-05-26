@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+public class uygulama5 {
+	
+	public static void main(String[] args) {
+	Scanner scan=new Scanner(System.in);
+	System.out.println("dogum tarihiniz ay olarak");
+	int ay=scan.nextInt();
+	System.out.println("dogum tarihiniz gun olarak");
+	int gün=scan.nextInt();
+	
+	
+	
+	
+	
+	if(ay>0 && ay<13) {
+		
+		if(ay==1) {
+			if(gün<=21) {
+				System.out.println("oglak burcusun");
+			}
+			else {
+				System.out.println("kova burcusun");
+			}}
+			if(ay==2) {
+				if(gün<=19) {
+					System.out.println("kova burcusun");
+				}
+				else {
+					System.out.println("balik burcusun");
+				}}
+				if(ay==3) {
+					if(gün<=20) {
+						System.out.println("balik burcusun");
+					}
+						else {
+							System.out.println("koç burcusun");
+						}}
+				if(ay==4) {
+					if(gün<=20) {
+						System.out.println("koç burcusun");
+					}
+						else {
+							System.out.println("boga burcusun");
+						}}
+						if(ay==5) {
+							if(gün<=21) {
+								System.out.println("boga burcusun");
+							}
+								else {
+									System.out.println("ikizler burcusun");
+								}}
+							if(ay==6) {
+								if(gün<=21) {
+									System.out.println("ikizler burcusun");
+								}
+									else {
+										System.out.println("yengec burcusun");
+									}}
+								if(ay==7) {
+									if(gün<=22) {
+										System.out.println("yengec burcusun");
+									}
+										else {
+											System.out.println("aslan burcusun");
+										}}
+											if(ay==8) {
+												if(gün<=23) {
+													System.out.println("aslan burcusun");
+												}
+													else {
+														System.out.println("basak burcusun");
+													}}
+														if(ay==9) {
+															if(gün<=23) {
+																System.out.println("basak burcusun");
+															}
+															else {
+																System.out.println("terazi burcusun");
+															}}
+															if(ay==10) {
+																if(gün<=23) {
+																	System.out.println("terazi burcusun");
+																}
+																	else {
+																		System.out.println("akrep burcusun");
+																	}}
+																if(ay==11) {
+																	if(gün<=22) {
+																		System.out.println("akrep burcusun");
+																	}
+																	else {
+																		System.out.println("yay burcusun");
+																	}}
+																	if(ay==12) {
+																		if(gün<=21) {
+																			System.out.println("yay burcusun");
+																		}
+																		else {
+																			System.out.println("oglak burcusun");
+																			
+																		}}
+			else 
+			System.out.println("geçerli doğum tarihi giriniz");
+		}
+}
