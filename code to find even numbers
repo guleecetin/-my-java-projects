@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class uygulama6 {
+
+	public static void main(String[] args) {
+
+		Scanner scan=new Scanner(System.in);
+		for(int i=0;i<4;i++) {
+		int sayı=scan.nextInt();
+		
+		 
+		
+		 			if(sayı%2==0) {
+				System.out.println("sayi cifttir");
+				
+			}
+				else 
+					System.out.println("sayi tektir");
+				
+		}
+			}
+}
+		
+		
