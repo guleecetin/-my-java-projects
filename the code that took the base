@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class uygulama8 {
+
+	public static void main(String[] args) {
+	
+		Scanner scan=new Scanner(System.in);
+		System.out.println("taban:");
+		int taban=scan.nextInt();
+		System.out.println("kuvvet:");
+		int kuvvet=scan.nextInt();
+		int sonuc=1;
+		for(int i=0;i<kuvvet;i++) {
+			
+				sonuc=sonuc*taban;
+		}
+		System.out.println("sonuc:"+sonuc);
+		
+				
+			
+	}}
