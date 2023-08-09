@@ -1,0 +1,71 @@
+package guı1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class guı1 {
+
+	public static void main(String[] args) {
+		JFrame frame=new JFrame("hesaplama");
+		
+		
+		JLabel label=new JLabel("birinci sayı");
+		label.setBounds(50,10,100,30);
+		
+		JTextField tf=new JTextField();
+	    tf.setBounds(50,40,200,30);
+	    
+		
+		JLabel label2=new JLabel("ikinci sayı");
+		label2.setBounds(50,70,100,30);
+		
+		JTextField tf2=new JTextField();
+		tf2.setBounds(50,100,200,30);
+		
+		
+		JLabel label3=new JLabel("toplam");
+		label3.setBounds(50,130,100,30);
+		
+		JTextField tf3=new JTextField();
+		tf3.setBounds(50,160,200,30);
+		  JButton btn=new JButton("toplam");
+		  btn.setBounds(50,220, 200,30);
+		  btn.addActionListener( new ActionListener() {
+			 
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int a=Integer.parseInt(tf.getText());
+				int b=Integer.parseInt(tf2.getText());
+				int c=a+b;
+				String toplam=String.valueOf(c);
+				
+				tf3.setText(toplam);
+				
+			}
+		  });
+		  
+		
+		  frame.add(label);
+		  frame.add(tf);
+		  frame.add(label2);
+		  frame.add(tf2);
+		  frame.add(label3);
+		  frame.add(tf3);
+		  frame.add(btn);
+		  frame.setSize(400,400);
+		  
+		  frame.setLayout(null);
+		  frame.setVisible(true);
+		
+		
+		
+
+	}
+
+}
