@@ -1,0 +1,58 @@
+package guı2;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+
+public class guı2 {
+
+	public static void main(String[] args) {
+		JFrame frame =new JFrame();
+		JLabel label=new JLabel();
+        label.setBounds(50,25,100,30);
+		
+		JLabel label2=new JLabel();
+		label2.setBounds(160,25,100,30);
+		
+		JTextArea area=new JTextArea();
+		area.setBounds(20,75,250,200);
+		 
+		JButton btn=new JButton("hesapla");
+		btn.setBounds(100,300,120,30);
+		 btn.addActionListener(new ActionListener() {
+			 public void actionPerfomed(ActionEvent e) {
+				 String text=area.getText();
+				 String words[]=text.split("\\s");
+				 label.setText("kelime:"+words.length);
+				 label2.setText("karakter:"+text.length());
+			 }
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				 
+					 String text=area.getText();
+					 String words[]=text.split("\\s");
+					 label.setText("kelime:"+words.length);
+					 label2.setText("karakter:"+text.length());
+				 }	
+			});
+		 
+				frame.add(label);
+				frame.add(label2);
+				frame.add(btn);
+				frame.add(area);
+				frame.setSize(400,400);
+				frame.setLayout(null);
+				frame.setVisible(true);
+				
+			
+				 
+			 
+		 }
+	}
+
+
